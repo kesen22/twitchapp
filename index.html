@@ -1,10 +1,43 @@
 <html lang="en">
-    <head>
-<script src="twitchapp.js"></script>
-<link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <p>this is a test</p>
-        <p>teesting github 2</p>
-    </body>
+
+<head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="twitchapp.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid text-center" id="wrapper1">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 offset-md-3" id="title">
+                <h1>Twitch Stream Status</h1>
+                <div class="container-fluid">
+                    <input class="btn" type="submit" id="all-streams" value="All streams" onclick="return processUsers(userList, 'all');">
+
+                    <input class="btn" type="submit" id="online-streams" value="Online streams" onclick="return processUsers(userList, 'online');"
+                    />
+
+                    <input class="btn" type="submit" id="offline-streams" value="Offline streams" onclick="return processUsers(userList, 'offline');"
+                    />
+                </div>
+                <!-- <form onsubmit="processUsers()">
+                    <button type="button" id="all-streams">All streams</button>
+                    <button type="button" id="online-streams">Online streams</button>
+                    <button type="button" id="offline-streams">Off streams</button>
+                </form> -->
+
+
+            </div>
+        </div>
+        <div class="container-fluid" id="results"></div>
+    </div>
+
+</body>
+
 </html>
